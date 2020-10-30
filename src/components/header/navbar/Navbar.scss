@@ -1,0 +1,26 @@
+.navbar {
+  color: white;
+  text-align: center;
+
+  .logo {
+    flex: 1;
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+
+  .search-tabs {
+    flex: 1;
+  }
+
+  .status {
+    flex: 1;
+    .user {
+      img {
+        width: 40px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

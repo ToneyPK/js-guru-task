@@ -10,17 +10,17 @@ import userImage from '../../../assets/media/user-image.jpg'
 
 export default function Navbar() {
   return (
-    <div>
+    <div className="navbar container d-flex">
       <a href="#" className="logo">
-        <img src={logoImage} alt="logo image"></img>
+        <img src={logoImage} alt="logo"></img>
       </a>
 
       <div className="search-tabs">
-        <a>Search items</a>
-        <a>Post items</a>
+        <a href="#">Search items</a>
+        <a href="#">Post items</a>
       </div>
 
-      <div onClick={'xss'} className="status">
+      <div onClick={'xss'} className="status flex-layout">
         <FontAwesomeIcon icon={faEnvelope} />
         <FontAwesomeIcon icon={faBell} />
         <div className="user">

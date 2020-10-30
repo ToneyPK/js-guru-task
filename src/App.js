@@ -1,4 +1,4 @@
-import './App.css'
+import './styles/App.scss'
 import Header from './components/header/Header'
 import About from './components/about/About'
 import CTA from './components/cta/CTA'
@@ -8,7 +8,7 @@ import Footer from './components/footer/Footer'
 
 function App() {
   return (
-    <div className="App">
+    <div className="main-container">
       <Header />
       <About />
       <CTA />
