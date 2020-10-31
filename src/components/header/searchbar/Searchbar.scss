@@ -7,22 +7,24 @@
       width: 16%;
       max-width: 400px;
       padding-left: 20px;
-      outline: none;
     }
+
     :nth-child(1) {
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
     }
+
     button {
       width: 60px;
       min-width: 60px;
+      min-height: 62px;
       position: relative;
       right: 25px;
       border-radius: 20px;
       border: none;
       background-color: $red;
-      outline: none;
       cursor: pointer;
+
       svg {
         color: $light-gray;
         font-size: 24px;

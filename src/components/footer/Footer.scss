@@ -1,0 +1,80 @@
+.footer {
+  background-color: $light-gray;
+  padding-top: 40px;
+  margin-top: 120px;
+
+  .container {
+    .info {
+      flex: 1;
+      flex-direction: column;
+      max-width: 50%;
+      img {
+        width: 120px;
+        margin-bottom: 20px;
+        flex: 1;
+      }
+
+      p {
+        flex: 1;
+        margin-bottom: 20px;
+        width: 60%;
+      }
+
+      .social-icons {
+        flex: 1;
+
+        svg {
+          font-size: 24px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .company-links {
+      flex: 1;
+      max-width: 20%;
+
+      h4 {
+        margin-bottom: 20px;
+      }
+
+      .links-container {
+        flex-direction: column;
+
+        a {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .charities {
+      flex: 1;
+      max-width: 20%;
+
+      h4 {
+        margin-bottom: 20px;
+      }
+
+      .links-container {
+        flex-direction: column;
+
+        a {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 60px;
+    padding-bottom: 20px;
+    p {
+      flex: 1;
+      max-width: 20%;
+    }
+    a {
+      flex: 1;
+      max-width: 10%;
+    }
+  }
+}

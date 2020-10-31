@@ -39,13 +39,44 @@ img {
   -ms-user-select: none;
 }
 
+button,
+input {
+  outline: none;
+}
+
+button {
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  color: $light;
+  margin-right: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.red {
+    background-color: $red;
+  }
+
+  &.hollow {
+    border: 2px solid $light;
+    background-color: transparent;
+  }
+}
+
 .container {
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
 .p-20 {
   padding: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
 }
 
 .d-flex {
