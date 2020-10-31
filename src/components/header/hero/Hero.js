@@ -7,7 +7,7 @@ import mainImg from '../../../assets/media/image-main.png'
 
 export default function Hero() {
   return (
-    <div className="hero container ai-center  d-flex">
+    <div className="hero container ai-center d-flex">
       <div className="hero-items-list d-flex">
         <div className="hero-item-content green ai-center d-flex">
           <FontAwesomeIcon icon={faHandHoldingUsd} />
