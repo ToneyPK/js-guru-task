@@ -4,8 +4,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default function Searchbar() {
   return (
-    <div>
-      <form>
+    <div className="searchbar ">
+      <form className="d-flex justify-center container">
         <input type="text" placeholder="Location"></input>
         <input type="text" placeholder="Category"></input>
         <input type="text" placeholder="Charity"></input>

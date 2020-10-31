@@ -1,4 +1,9 @@
 .container {
+  width: 90%;
+  margin: auto;
+}
+
+.p-20 {
   padding: 20px;
 }
 
@@ -10,4 +15,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }

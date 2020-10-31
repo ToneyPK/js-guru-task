@@ -12,14 +12,39 @@
 
   .search-tabs {
     flex: 1;
+    a {
+      padding-bottom: 8px;
+      margin: 8px;
+      color: $light;
+      text-decoration: none;
+
+      &.active {
+        border-bottom: 1px solid $light;
+      }
+    }
   }
 
   .status {
     flex: 1;
+    align-self: center;
+
+    svg {
+      margin-right: 20px;
+      font-size: 24px;
+    }
     .user {
       img {
-        width: 40px;
+        width: 36px;
+        height: auto;
         border-radius: 50%;
+        margin-right: 10px;
+      }
+      p {
+        margin-right: 10px;
+      }
+      svg {
+        font-size: 10px;
+        margin-right: 0;
       }
     }
   }

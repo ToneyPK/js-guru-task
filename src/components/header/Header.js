@@ -6,12 +6,13 @@ import Hero from './hero/Hero'
 export default function Header() {
   return (
     <div>
-      <div className="App">
+      <div>
         <header>
           <Navbar />
           <Searchbar />
           <Hero />
         </header>
+        <div className="curved-background"></div>
       </div>
     </div>
   )

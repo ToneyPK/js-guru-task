@@ -1,0 +1,65 @@
+.hero {
+  margin-top: 72px;
+  .hero-items-list {
+    margin-left: auto;
+    margin-right: 32px;
+    flex-direction: column;
+    .hero-item-content {
+      height: 72px;
+      min-width: 100px;
+      max-width: 360px;
+      background-color: $dark-blue;
+      color: $light;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      &.green {
+        border: 3px solid $green;
+        svg {
+          background-color: $green;
+        }
+      }
+      &.red {
+        border: 3px solid $red;
+        svg {
+          background-color: $red;
+        }
+      }
+      &.purple {
+        border: 3px solid $purple;
+        svg {
+          background-color: $purple;
+        }
+      }
+      svg {
+        position: relative;
+        right: 2px;
+        color: $dark-blue;
+        font-size: 24px;
+        min-width: 46px;
+        max-width: 46px;
+        height: 46px;
+        border-radius: 20px;
+        padding: 16px;
+      }
+      p {
+        flex: 2;
+        padding: 20px;
+        text-align: left;
+      }
+    }
+  }
+  .hero-image {
+    margin-right: auto;
+    img {
+      user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      width: 100%;
+      max-width: 600px;
+      min-width: 200px;
+    }
+  }
+}
