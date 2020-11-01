@@ -13,6 +13,7 @@
     }
 
     p {
+      color: $dark-gray;
       margin-bottom: 40px;
     }
 
@@ -23,27 +24,32 @@
     .content {
       width: 50%;
       margin: auto;
+      margin-left: 120px;
+
+      .text-light {
+        color: $red;
+      }
     }
 
     .outer-circle {
       background: transparent;
       border: 5px solid $green;
       border-radius: 50%;
-      height: 300px;
-      width: 300px;
+      height: 250px;
+      width: 250px;
       position: absolute;
-      top: 180px;
-      left: -120px;
+      top: 210px;
+      left: -100px;
 
       .inner-circle {
         position: absolute;
         border: 5px solid $green;
         border-radius: 50%;
-        height: 125px;
-        width: 125px;
+        height: 100px;
+        width: 100px;
         top: 78%;
         left: 78%;
-        margin: -150px 0px 0px -150px;
+        margin: -125px 0px 0px -125px;
       }
     }
   }

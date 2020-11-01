@@ -10,7 +10,7 @@ export default function Searchbar() {
         <input type="text" placeholder="Category"></input>
         <input type="text" placeholder="Charity"></input>
         <button type="submit">
-          <FontAwesomeIcon icon={faSearch} />
+          <FontAwesomeIcon className="hvr-grow" icon={faSearch} />
         </button>
       </form>
     </div>

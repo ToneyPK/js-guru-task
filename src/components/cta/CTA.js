@@ -12,8 +12,8 @@ export default function CTA() {
             To post an item for sale - please register or sign in if you are
             already registered with allgood.
           </p>
-          <button className="red">Sign up</button>
-          <button className="hollow">Sign In</button>
+          <button className="red hvr-grow">Sign up</button>
+          <button className="hollow hvr-grow">Sign In</button>
         </div>
       </div>
     </div>

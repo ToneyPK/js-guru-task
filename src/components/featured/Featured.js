@@ -22,7 +22,7 @@ export default function Featured() {
       img: img2,
       name: 'Beige sofa',
       author: 'Harinder B.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      description: 'In good contition, from smoke free home.',
       price: 400,
     },
 
@@ -40,7 +40,7 @@ export default function Featured() {
       img: img1,
       name: 'Beige sofa',
       author: 'Harinder B.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      description: 'In good contition, from smoke free home.',
       price: 400,
     },
 
@@ -58,7 +58,7 @@ export default function Featured() {
       img: img3,
       name: 'Beige sofa',
       author: 'Harinder B.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      description: 'In good contition, from smoke free home.',
       price: 400,
     },
 
@@ -76,7 +76,7 @@ export default function Featured() {
       img: img2,
       name: 'Beige sofa',
       author: 'Harinder B.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      description: 'In good contition, from smoke free home.',
       price: 400,
     },
 
@@ -93,7 +93,7 @@ export default function Featured() {
       img: img1,
       name: 'Beige sofa',
       author: 'Harinder B.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      description: 'In good contition, from smoke free home.',
       price: 400,
     },
 
@@ -107,12 +107,35 @@ export default function Featured() {
     },
   ])
 
+  const ArrowLeft = (props) => {
+    if (props.currentSlide == 0) return false
+    else
+      return (
+        <button {...props} className={'prev'}>
+          <p>{'<'}</p>
+        </button>
+      )
+  }
+
+  const ArrowRight = (props) => {
+    if (props.slideCount - props.currentSlide == 4) {
+      return false
+    } else
+      return (
+        <button {...props} className={'next'}>
+          <p>{'>'}</p>
+        </button>
+      )
+  }
+
   const settings = {
     dots: false,
     infinite: false,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
+    prevArrow: <ArrowLeft />,
+    nextArrow: <ArrowRight />,
   }
 
   return (

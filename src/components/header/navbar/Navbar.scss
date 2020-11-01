@@ -4,6 +4,7 @@
 
   .logo {
     flex: 1;
+
     img {
       width: auto;
       height: 50px;
@@ -28,10 +29,15 @@
     flex: 1;
     align-self: center;
 
-    svg {
-      margin-right: 20px;
-      font-size: 24px;
+    a {
+      color: $light;
+
+      svg {
+        margin-right: 20px;
+        font-size: 24px;
+      }
     }
+
     .user {
       img {
         width: 36px;
@@ -39,12 +45,16 @@
         border-radius: 50%;
         margin-right: 10px;
       }
-      p {
-        margin-right: 10px;
-      }
-      svg {
-        font-size: 10px;
-        margin-right: 0;
+
+      a {
+        p {
+          margin-right: 10px;
+        }
+
+        svg {
+          font-size: 10px;
+          margin-right: 0;
+        }
       }
     }
   }

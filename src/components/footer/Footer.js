@@ -16,9 +16,15 @@ export default function Footer() {
             charity or campaign you choose.
           </p>
           <div className="social-icons">
-            <FontAwesomeIcon icon={faFacebookSquare} />
-            <FontAwesomeIcon icon={faInstagramSquare} />
-            <FontAwesomeIcon icon={faTwitterSquare} />
+            <a href="#">
+              <FontAwesomeIcon className="hvr-grow" icon={faFacebookSquare} />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon className="hvr-grow" icon={faInstagramSquare} />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon className="hvr-grow" icon={faTwitterSquare} />
+            </a>
           </div>
         </div>
 

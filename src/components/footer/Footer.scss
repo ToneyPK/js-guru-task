@@ -18,14 +18,17 @@
         flex: 1;
         margin-bottom: 20px;
         width: 60%;
+        color: $dark-gray;
       }
 
       .social-icons {
         flex: 1;
-
-        svg {
-          font-size: 24px;
-          margin-right: 20px;
+        a {
+          color: $dark-blue;
+          svg {
+            font-size: 24px;
+            margin-right: 20px;
+          }
         }
       }
     }
@@ -42,6 +45,7 @@
         flex-direction: column;
 
         a {
+          color: $dark-gray;
           margin-bottom: 20px;
         }
       }
@@ -59,6 +63,7 @@
         flex-direction: column;
 
         a {
+          color: $dark-gray;
           margin-bottom: 20px;
         }
       }
@@ -71,9 +76,12 @@
     p {
       flex: 1;
       max-width: 20%;
+      min-width: 150px;
     }
     a {
+      color: $dark-gray;
       flex: 1;
+      min-width: 150px;
       max-width: 10%;
     }
   }

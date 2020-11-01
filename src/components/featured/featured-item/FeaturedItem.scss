@@ -1,23 +1,29 @@
 .featured-item {
   width: 90%;
+  min-width: 200px;
   background-color: $light-gray;
   border-radius: 20px;
 
   .item-info {
     padding: 20px;
+    min-height: 150px;
+    color: $dark-gray;
 
     h4 {
       margin-bottom: 30px;
+      color: $dark-blue;
     }
 
     h6 {
       margin-bottom: 20px;
+      color: $dark-blue;
     }
 
     .price {
       font-size: 24px;
       font-weight: 600;
       margin-top: 20px;
+      color: $dark-blue;
     }
   }
 
@@ -29,16 +35,19 @@
     border-top-left-radius: 20px;
   }
 
-  .featured-link {
-    background-color: $gray;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+  a {
+    .featured-link {
+      color: $dark-blue;
+      background-color: $gray;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
 
-    svg {
-      margin-right: 6px;
+      svg {
+        margin-right: 6px;
+      }
     }
   }
 }

@@ -10,7 +10,7 @@ import userImage from '../../../assets/media/user-image.jpg'
 
 export default function Navbar() {
   return (
-    <div className="navbar container p-20 d-flex ai-center">
+    <div className="navbar p-20 d-flex ai-center">
       <a href="#" className="logo">
         <img src={logoImage} alt="logo"></img>
       </a>
@@ -23,12 +23,19 @@ export default function Navbar() {
       </div>
 
       <div onClick={'xss'} className="status flex-layout ai-center">
-        <FontAwesomeIcon icon={faEnvelope} />
-        <FontAwesomeIcon icon={faBell} />
+        <a href="#">
+          <FontAwesomeIcon className="hvr-grow" icon={faEnvelope} />
+        </a>
+        <a href="#">
+          <FontAwesomeIcon className="hvr-grow" icon={faBell} />
+        </a>
+
         <div className="user d-flex ai-center">
           <img src={userImage} />
-          <p>Username</p>
-          <FontAwesomeIcon icon={faChevronDown} />
+          <a className="d-flex ai-center" href="#">
+            <p>Username</p>
+            <FontAwesomeIcon icon={faChevronDown} />
+          </a>
         </div>
       </div>
     </div>
