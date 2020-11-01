@@ -27,6 +27,7 @@ export default function Navbar() {
           <FontAwesomeIcon className="hvr-grow" icon={faEnvelope} />
         </a>
         <a href="#">
+          <div className="notifications">2</div>
           <FontAwesomeIcon className="hvr-grow" icon={faBell} />
         </a>
 

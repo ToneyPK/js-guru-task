@@ -31,6 +31,20 @@
 
     a {
       color: $light;
+      position: relative;
+
+      .notifications {
+        z-index: 100;
+        position: absolute;
+        padding: 2px;
+        font-size: 12px;
+        top: -10px;
+        right: 10px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $red;
+      }
 
       svg {
         margin-right: 20px;
