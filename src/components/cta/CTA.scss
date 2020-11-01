@@ -24,3 +24,37 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .cta {
+    .container {
+      padding: 0px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      flex-direction: column;
+      flex-flow: column-reverse;
+
+      img {
+        margin-top: 60px;
+      }
+
+      .cta-content {
+        p {
+          margin: 40px 0;
+        }
+
+        .buttons {
+          display: flex;
+        }
+
+        button {
+          margin-right: 10px;
+
+          &.hollow {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

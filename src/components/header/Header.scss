@@ -13,3 +13,13 @@ header {
   -webkit-clip-path: ellipse(60% 50% at 50% 50%);
   clip-path: ellipse(60% 50% at 50% 50%);
 }
+
+@media (max-width: 480px) {
+  header {
+    padding-bottom: 40px;
+  }
+
+  .curved-background {
+    display: none;
+  }
+}

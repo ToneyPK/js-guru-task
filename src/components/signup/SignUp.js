@@ -3,7 +3,7 @@ import React from 'react'
 export default function SignUp() {
   return (
     <div className="sign-up ">
-      <div className="box ">
+      <div className="box container">
         <div className="content">
           <h3>Are you a Charity or Organization looking to Fundraise?</h3>
           <p>

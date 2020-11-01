@@ -79,3 +79,24 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .about {
+    padding-top: 40px;
+    overflow-x: scroll;
+    overflow-y: none;
+    width: 100%;
+
+    .content {
+      .icons {
+        height: 300px;
+      }
+
+      .video {
+        width: 400px;
+        margin: auto;
+        margin-left: 0;
+      }
+    }
+  }
+}

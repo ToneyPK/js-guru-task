@@ -57,3 +57,21 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    flex-flow: column-reverse;
+
+    .hero-items-list {
+      margin: 0;
+    }
+
+    .hero-image {
+      margin-bottom: 20px;
+      img {
+        content: url('../../../assets/media/image_mobile.png');
+      }
+    }
+  }
+}

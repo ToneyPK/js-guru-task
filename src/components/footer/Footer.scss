@@ -73,6 +73,8 @@
   .copyright {
     margin-top: 60px;
     padding-bottom: 20px;
+    text-align: justify;
+
     p {
       flex: 1;
       max-width: 20%;
@@ -83,6 +85,58 @@
       flex: 1;
       min-width: 150px;
       max-width: 10%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    .container {
+      flex-direction: column;
+
+      .info {
+        margin: 0;
+        max-width: 100%;
+
+        p {
+          width: 100%;
+        }
+      }
+
+      .company-links,
+      .charities {
+        padding-top: 40px;
+        max-width: 100%;
+
+        .links-container {
+          a {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .charities {
+        .links-container {
+          a:nth-child(2) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      flex-direction: column;
+      text-align: left;
+
+      p {
+        padding-bottom: 10px;
+        max-width: 100%;
+      }
+
+      a {
+        max-width: 100%;
+        padding: 10px 0;
+      }
     }
   }
 }

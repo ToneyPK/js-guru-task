@@ -37,3 +37,9 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .searchbar {
+    display: none;
+  }
+}

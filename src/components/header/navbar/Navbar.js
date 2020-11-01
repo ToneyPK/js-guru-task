@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faBell } from '@fortawesome/free-regular-svg-icons'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import logoImage from '../../../assets/media/logo-jsguru.png'
 import userImage from '../../../assets/media/user-image.jpg'
@@ -38,6 +39,15 @@ export default function Navbar() {
             <FontAwesomeIcon icon={faChevronDown} />
           </a>
         </div>
+      </div>
+
+      <div className="searchbar">
+        <form className="d-flex justify-center container">
+          <input type="text" placeholder="Search or post..."></input>
+          <button type="submit">
+            <FontAwesomeIcon className="hvr-grow" icon={faSearch} />
+          </button>
+        </form>
       </div>
     </div>
   )

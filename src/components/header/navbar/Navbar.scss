@@ -72,4 +72,49 @@
       }
     }
   }
+
+  .searchbar {
+    display: none;
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    background-color: $light;
+
+    .logo {
+      img {
+        height: auto;
+        width: 100px;
+        content: url('../../../assets//media/logo-mobile.png');
+      }
+      margin-right: 20px;
+    }
+
+    .search-tabs {
+      display: none;
+    }
+
+    .status {
+      flex: 1;
+      align-self: center;
+
+      display: none;
+    }
+
+    .searchbar {
+      display: block;
+      form {
+        input {
+          width: 120px;
+          background-color: $light-gray;
+          border: none;
+        }
+        button {
+          right: 12px;
+        }
+      }
+    }
+  }
 }

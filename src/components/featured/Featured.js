@@ -128,11 +128,24 @@ export default function Featured() {
       )
   }
 
+  const isMobile = () => {
+    if (window.innerWidth < 1200) return true
+    else return false
+  }
+
+  let slideNubmer = () => {
+    if (isMobile()) return 1
+    else return 4
+  }
+
   const settings = {
     dots: false,
     infinite: false,
+    centerMode: isMobile(),
+    centerPadding: 20,
+    arrows: !isMobile(),
     speed: 300,
-    slidesToShow: 4,
+    slidesToShow: slideNubmer(),
     slidesToScroll: 1,
     prevArrow: <ArrowLeft />,
     nextArrow: <ArrowRight />,
