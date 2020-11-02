@@ -41,5 +41,11 @@
 @media (max-width: 910px) {
   .searchbar {
     display: none;
+
+    .form {
+      button {
+        margin: 0;
+      }
+    }
   }
 }

@@ -74,6 +74,7 @@ export default function About() {
         </div>
 
         <div className="video">
+          <h3 className="d-none">Watch the video</h3>
           <img src={videoImage} />
         </div>
       </div>

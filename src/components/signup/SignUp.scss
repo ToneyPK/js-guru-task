@@ -55,7 +55,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 620px) {
   .sign-up {
     background-color: $light-gray;
     position: relative;
@@ -77,13 +77,14 @@
       }
 
       .outer-circle {
+        display: grid;
         background: transparent;
         border: 5px solid $green;
         border-radius: 50%;
-        height: 150px;
-        width: 150px;
-        position: absolute;
-        top: 290px;
+        max-height: 150px;
+        max-width: 150px;
+        position: relative;
+        top: -80px;
         left: 180px;
         z-index: -1;
 
@@ -97,6 +98,17 @@
           left: 114%;
           margin: -125px 0px 0px -125px;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .sign-up {
+    .box {
+      .outer-circle {
+        left: 120px;
+        top: -100px;
       }
     }
   }

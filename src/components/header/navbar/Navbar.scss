@@ -113,6 +113,19 @@
         }
         button {
           right: 12px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    .searchbar {
+      form {
+        input {
+          width: 80px;
         }
       }
     }
