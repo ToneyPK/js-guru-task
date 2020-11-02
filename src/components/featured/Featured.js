@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import img1 from '../../assets/media/img1.jpg'
 import img2 from '../../assets/media/img2.jpg'
 import img3 from '../../assets/media/img3.jpg'
@@ -106,6 +106,14 @@ export default function Featured() {
       price: 300,
     },
   ])
+
+const [isOnMobile, setIsOnMobile] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setIsOnMobile(isMobile()) 
+    })
+  });
 
   const ArrowLeft = (props) => {
     if (props.currentSlide == 0) return false
