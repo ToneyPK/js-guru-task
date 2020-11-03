@@ -79,12 +79,12 @@
     position: relative;
 
     .box {
-      height: 400px;
       padding: 10px;
       z-index: 0;
 
       .content {
         padding-top: 40px;
+        padding-bottom: 40px;
         margin: 0;
         width: 100%;
 
@@ -102,16 +102,16 @@
         max-height: 150px;
         max-width: 150px;
         position: relative;
-       // top: -80px;
-       left: unset;
+        left: unset;
         z-index: -1;
-        right: 0;
-        bottom: 0;
         position: absolute;
         bottom: 0;
         right: 0;
         transform: translate(15%, 50%);
 
+        &:hover {
+          transform: translate(15%, 50%) scale(1.1);
+        }
 
         .inner-circle {
           position: absolute;

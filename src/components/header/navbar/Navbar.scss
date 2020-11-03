@@ -106,8 +106,9 @@
     .searchbar {
       display: block;
       form {
+        width: 100%;
         input {
-          width: 120px;
+          width: 100%;
           background-color: $light-gray;
           border: none;
         }
@@ -125,7 +126,16 @@
     .searchbar {
       form {
         input {
-          width: 80px;
+          height: 40px;
+          padding-left: 10px;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+        button {
+          min-width: 42px;
+          min-height: 42px;
+          height: 40px;
+          border-radius: 10px;
         }
       }
     }
