@@ -1,12 +1,16 @@
 .sign-up {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 120px;
+
   .box {
     background: $light-gray;
     padding: 60px;
-    margin-left: auto;
-    margin-top: 120px;
-    width: 77%;
+    width: 90%;
     height: 100%;
     position: relative;
+    margin: 0;
+    box-sizing: border-box;
 
     h3 {
       margin-bottom: 40px;
@@ -38,8 +42,21 @@
       height: 250px;
       width: 250px;
       position: absolute;
-      top: 210px;
-      left: -100px;
+      left: 0;
+      bottom: 0;
+      transform: translate(-37%, 38%) scale(1);
+      transition: .3s;
+
+      &:hover {
+        transform: translate(-37%, 38%) scale(1.1);
+        transition: .3s;
+        border: 5px solid $red;
+
+        .inner-circle {
+          border: 5px solid $red;
+          transition: .3s;
+        }
+      }
 
       .inner-circle {
         position: absolute;
@@ -50,6 +67,7 @@
         top: 78%;
         left: 78%;
         margin: -125px 0px 0px -125px;
+        transition: .3s;
       }
     }
   }
@@ -84,9 +102,16 @@
         max-height: 150px;
         max-width: 150px;
         position: relative;
-        top: -80px;
-        left: 180px;
+       // top: -80px;
+       left: unset;
         z-index: -1;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(15%, 50%);
+
 
         .inner-circle {
           position: absolute;
@@ -103,13 +128,3 @@
   }
 }
 
-@media (max-width: 400px) {
-  .sign-up {
-    .box {
-      .outer-circle {
-        left: 120px;
-        top: -100px;
-      }
-    }
-  }
-}

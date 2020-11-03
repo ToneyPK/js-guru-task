@@ -1,17 +1,20 @@
 .hero {
   margin-top: 72px;
+
   .hero-items-list {
     margin-left: auto;
     margin-right: 32px;
     flex-direction: column;
+
     .hero-item-content {
       height: 72px;
       min-width: 100px;
-      max-width: 360px;
+      max-width: 500px;
       background-color: $dark-blue;
       color: $light;
       border-radius: 20px;
       margin-bottom: 16px;
+      
       &.green {
         border: 3px solid $green;
         svg {
@@ -30,6 +33,7 @@
           background-color: $purple;
         }
       }
+
       svg {
         position: relative;
         right: 2px;

@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function SignUp() {
   return (
-    <div className="sign-up ">
-      <div className="box container">
+    <div className="sign-up">
+      <div className="box">
         <div className="content">
           <h3>Are you a Charity or Organization looking to Fundraise?</h3>
           <p>
@@ -16,8 +16,8 @@ export default function SignUp() {
           </p>
           <button className="red hvr-grow">Sign /up charity/campaign</button>
         </div>
-        <div className="outer-circle hvr-pulse">
-          <div className="inner-circle hvr-pulse"></div>
+        <div className="outer-circle">
+          <div className="inner-circle"></div>
         </div>
       </div>
     </div>

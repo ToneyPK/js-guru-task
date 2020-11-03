@@ -17,6 +17,15 @@
     .cta-content {
       margin: 0 auto;
       margin-left: 0;
+      width: 100%;
+
+      .buttons{
+        .red, .hollow {
+          flex: 1;
+          max-width: 280px;
+        }
+        .red{margin-right: 20px;}
+      }
 
       p {
         margin: 20px 0;
