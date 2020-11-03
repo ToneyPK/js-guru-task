@@ -105,13 +105,16 @@
 
     .searchbar {
       display: block;
+
       form {
         width: 100%;
+
         input {
           width: 100%;
           background-color: $light-gray;
           border: none;
         }
+
         button {
           right: 12px;
           margin: 0;
@@ -131,6 +134,7 @@
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
         }
+
         button {
           min-width: 42px;
           min-height: 42px;

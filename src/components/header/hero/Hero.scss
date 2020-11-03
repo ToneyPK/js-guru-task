@@ -14,21 +14,26 @@
       color: $light;
       border-radius: 20px;
       margin-bottom: 16px;
-      
+
       &.green {
         border: 3px solid $green;
+
         svg {
           background-color: $green;
         }
       }
+
       &.red {
         border: 3px solid $red;
+
         svg {
           background-color: $red;
         }
       }
+
       &.purple {
         border: 3px solid $purple;
+
         svg {
           background-color: $purple;
         }
@@ -45,6 +50,7 @@
         border-radius: 20px;
         padding: 16px;
       }
+
       p {
         flex: 2;
         padding: 20px;
@@ -54,6 +60,7 @@
   }
   .hero-image {
     margin-right: auto;
+
     img {
       width: 100%;
       max-width: 600px;
@@ -73,6 +80,7 @@
 
     .hero-image {
       margin-bottom: 20px;
+
       img {
         content: url('../../../assets/media/image_mobile.png');
       }

@@ -21,21 +21,26 @@
   .content {
     position: relative;
     margin: 50px auto 50px auto;
+
     .intro {
       flex: 1;
     }
+
     .icons {
       flex: 1;
+
       .icon {
         position: relative;
         flex-direction: column;
         width: 200px;
         min-width: 160px;
         margin: 0 30px;
+
         img {
           width: 160px;
           height: auto;
         }
+
         .arrow {
           position: absolute;
           top: 0%;
@@ -43,18 +48,22 @@
           transform: translate(-60%, -200%) rotate(55deg);
           width: 100px;
         }
+
         .dash {
           position: absolute;
           transform: translate(-20%, 450%) scale(0.5, 0.5);
         }
+
         .dash-heart {
           transform: translate(-85%, -25%) scale(4, 4);
         }
+
         h4 {
           text-align: center;
           width: 100%;
           margin: 20px 0;
         }
+
         p {
           color: $dark-gray;
           .red-text {
@@ -64,6 +73,7 @@
           }
         }
       }
+
       .icon-heart {
         position: absolute;
         top: 50%;
@@ -78,8 +88,10 @@
         }
       }
     }
+
     .video {
       width: 400px;
+
       img {
         width: 100%;
       }
@@ -101,7 +113,7 @@
         overflow-y: hidden;
         overflow-x: scroll;
         height: 100%;
-        
+
         .icon {
           .arrow {
             display: none;

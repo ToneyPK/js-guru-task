@@ -1,7 +1,7 @@
 .sign-up {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 120px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 120px;
 
   .box {
     background: $light-gray;
@@ -45,16 +45,16 @@
       left: 0;
       bottom: 0;
       transform: translate(-37%, 38%) scale(1);
-      transition: .3s;
+      transition: 0.3s;
 
       &:hover {
         transform: translate(-37%, 38%) scale(1.1);
-        transition: .3s;
+        transition: 0.3s;
         border: 5px solid $red;
 
         .inner-circle {
           border: 5px solid $red;
-          transition: .3s;
+          transition: 0.3s;
         }
       }
 
@@ -67,7 +67,7 @@
         top: 78%;
         left: 78%;
         margin: -125px 0px 0px -125px;
-        transition: .3s;
+        transition: 0.3s;
       }
     }
   }
@@ -101,7 +101,6 @@
         border-radius: 50%;
         max-height: 150px;
         max-width: 150px;
-        position: relative;
         left: unset;
         z-index: -1;
         position: absolute;
@@ -127,4 +126,3 @@
     }
   }
 }
-

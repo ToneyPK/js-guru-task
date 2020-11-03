@@ -8,6 +8,7 @@
       flex: 1;
       flex-direction: column;
       max-width: 50%;
+
       img {
         width: 120px;
         margin-bottom: 20px;
@@ -23,8 +24,10 @@
 
       .social-icons {
         flex: 1;
+
         a {
           color: $dark-blue;
+
           svg {
             font-size: 24px;
             margin-right: 20px;
