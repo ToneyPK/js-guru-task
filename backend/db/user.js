@@ -1,4 +1,5 @@
+//dummy user data
 export default {
   email: 'admin@admin.com',
-  password: '12345',
+  password: 'MTIzNDU=',
 }

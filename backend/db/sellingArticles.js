@@ -1,3 +1,4 @@
+// dummy selling articles data
 const img1 =
   'https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1298&q=80'
 const img2 =

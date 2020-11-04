@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "express-validation": "^0.4.5",
     "helmet": "^4.2.0",
+    "joi": "^7.2.3",
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
