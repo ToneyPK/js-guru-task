@@ -7,7 +7,9 @@ export default function Login(props) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const login = async () => {
+  const login = async (e) => {
+    e.preventDefault()
+
     const headers = {
       'Content-Type': 'application/json',
     }
@@ -37,14 +39,14 @@ export default function Login(props) {
 
   return (
     <div className='block-backdrop'>
-      <form className='login d-flex'>
+      <form onSubmit={login} className='login d-flex'>
         <input type='text' placeholder='Email' onChange={handleEmailChange} />
         <input
           type='password'
           placeholder='Password'
           onChange={handlePasswordChange}
         />
-        <button type='submit' className='red hvr-grow' onClick={login}>
+        <button type='submit' className='red hvr-grow'>
           Login
         </button>
       </form>
