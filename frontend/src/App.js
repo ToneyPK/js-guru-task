@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './styles/App.scss'
 import Header from './components/header/Header'
 import About from './components/about/About'
@@ -11,7 +11,7 @@ function App() {
   const [isLogged, setIsLogged] = useState(false)
 
   return (
-    <div className="main-container">
+    <div className='main-container'>
       <Header setIsLogged={setIsLogged} isLogged={isLogged} />
       <About />
       <CTA />
