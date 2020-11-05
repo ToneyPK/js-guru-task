@@ -1,5 +1,6 @@
 import usersJson from '../db/user.js'
 import jsontWebToken from 'jsonwebtoken'
+import bcrypt from 'bcrypt'
 import { SECRET_KEY } from '../config/config.js'
 
 // controller function that authenticates the user and serves a JWT token if the user is found in the 'database'
@@ -19,7 +20,7 @@ export const authenticate = (req, res) => {
           expiresIn: '1d',
         }
       )
-    else res.json('User not found.')
+    else res.status(404).json('User not found.')
   } catch (error) {
     res.json(error)
   }
@@ -27,8 +28,7 @@ export const authenticate = (req, res) => {
 
 // acts as a dummy query to a database which returns the desired user
 const checkIfUserExists = (email, password) => {
-  const decryptedPassword = Buffer.from(usersJson.password, 'base64').toString(
-    'ascii'
-  )
-  return usersJson.email == email && decryptedPassword == password
+  const result = bcrypt.compareSync(password, usersJson.password)
+
+  return result && usersJson.email == email
 }
