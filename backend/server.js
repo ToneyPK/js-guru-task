@@ -2,6 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import helmet from 'helmet'
 import expressValidation from 'express-validation'
+import cors from 'cors'
 
 import authRoute from './routes/authRoute.js'
 import customerRoute from './routes/customerRoute.js'
@@ -16,6 +17,8 @@ app.use(bodyParser.json())
 
 // sets headers for better security
 app.use(helmet())
+
+app.use(cors())
 
 // serves routes
 app.use('/api/login', authRoute)

@@ -1,119 +1,31 @@
 import React, { useState, useEffect } from 'react'
-import img1 from '../../assets/media/img1.jpg'
-import img2 from '../../assets/media/img2.jpg'
-import img3 from '../../assets/media/img3.jpg'
 import FeaturedItem from './featured-item/FeaturedItem'
 import Slider from 'react-slick'
-import { faTired } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
 
-export default function Featured() {
-  const [featuredItems, setFeaturedItems] = useState([
-    {
-      id: 1,
-      img: img1,
-      name: 'Almost new sofa',
-      author: 'John S.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      price: 300,
-    },
+import { articlesEndpoint } from '../../api/endpoints'
 
-    {
-      id: 2,
-      img: img2,
-      name: 'Beige sofa',
-      author: 'Harinder B.',
-      description: 'In good contition, from smoke free home.',
-      price: 400,
-    },
+export default function Featured(props) {
+  const [featuredItems, setFeaturedItems] = useState([])
 
-    {
-      id: 3,
-      img: img3,
-      name: 'Almost new sofa',
-      author: 'John S.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      price: 300,
-    },
+  const [isOnMobile, setIsOnMobile] = useState(false)
 
-    {
-      id: 4,
-      img: img1,
-      name: 'Beige sofa',
-      author: 'Harinder B.',
-      description: 'In good contition, from smoke free home.',
-      price: 400,
-    },
-
-    {
-      id: 5,
-      img: img2,
-      name: 'Almost new sofa',
-      author: 'John S.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      price: 300,
-    },
-
-    {
-      id: 6,
-      img: img3,
-      name: 'Beige sofa',
-      author: 'Harinder B.',
-      description: 'In good contition, from smoke free home.',
-      price: 400,
-    },
-
-    {
-      id: 7,
-      img: img1,
-      name: 'Almost new sofa',
-      author: 'John S.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      price: 300,
-    },
-
-    {
-      id: 8,
-      img: img2,
-      name: 'Beige sofa',
-      author: 'Harinder B.',
-      description: 'In good contition, from smoke free home.',
-      price: 400,
-    },
-
-    {
-      id: 9,
-      img: img3,
-      name: 'Almost new sofa',
-      author: 'John S.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      price: 300,
-    },
-    {
-      id: 10,
-      img: img1,
-      name: 'Beige sofa',
-      author: 'Harinder B.',
-      description: 'In good contition, from smoke free home.',
-      price: 400,
-    },
-
-    {
-      id: 11,
-      img: img2,
-      name: 'Almost new sofa',
-      author: 'John S.',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      price: 300,
-    },
-  ])
-
-const [isOnMobile, setIsOnMobile] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      setIsOnMobile(isMobile()) 
+  useEffect(async () => {
+    const articleResults = await axios.get(articlesEndpoint, {
+      headers: {
+        'Content-Type': 'appliaction/json',
+        Authorization:
+          'Bearer ' +
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vyc0pzb24iOnsiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJwYXNzd29yZCI6Ik1USXpORFU9In0sImlhdCI6MTYwNDUyNTcxN30.WGLESGVnSgy8Po0YovDlK1yniL95leIhyBEUt71QmO8',
+      },
     })
-  });
+
+    setFeaturedItems(articleResults.data)
+
+    window.addEventListener('resize', () => {
+      setIsOnMobile(isMobile())
+    })
+  }, [])
 
   const ArrowLeft = (props) => {
     if (props.currentSlide == 0) return false

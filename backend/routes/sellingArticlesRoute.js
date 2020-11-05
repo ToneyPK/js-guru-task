@@ -11,6 +11,7 @@ const router = express.Router()
 
 router.get('/', tokenVerification, (req, res) => {
   const secretKeyDecoded = Buffer.from(SECRET_KEY, 'base64')
+
   jsonWebToken.verify(req.token, secretKeyDecoded, (err, authData) => {
     if (err) res.sendStatus(403)
     else res.send(sellingArticlesJson)
