@@ -11,6 +11,10 @@ import dashedHeartImage from '../../assets/media/dashed-heart.png'
 import videoImage from '../../assets/media/watch-the-video.png'
 
 export default function About() {
+  const visitVideo = () => {
+    window.open('https://www.youtube.com/watch?v=mbewAhPKkoQ', '_blank')
+  }
+
   return (
     <div className='about d-flex container'>
       <div className='intro'>
@@ -75,7 +79,7 @@ export default function About() {
 
         <div className='video'>
           <h3 className='d-none'>Watch the video</h3>
-          <img src={videoImage} alt='video' />
+          <img onClick={visitVideo} src={videoImage} alt='video' />
         </div>
       </div>
     </div>

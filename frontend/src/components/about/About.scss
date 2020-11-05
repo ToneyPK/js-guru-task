@@ -91,6 +91,9 @@
 
     .video {
       width: 400px;
+      &:hover {
+        cursor: pointer;
+      }
 
       img {
         width: 100%;

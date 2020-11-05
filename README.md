@@ -4,7 +4,7 @@
 
 # Requirements:
 
-- Node version 14.15.0
+- Node version 12.19.0
 
 # Credentials
 

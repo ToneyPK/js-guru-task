@@ -14,7 +14,7 @@ export default function SignUp() {
             </a>{' '}
             or complete out online form.
           </p>
-          <button className='red hvr-grow'>Sign /up charity/campaign</button>
+          <button className='red hvr-grow'>Sign up charity/campaign</button>
         </div>
         <div className='outer-circle'>
           <div className='inner-circle'></div>

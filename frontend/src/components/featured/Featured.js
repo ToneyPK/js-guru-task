@@ -35,22 +35,22 @@ export default function Featured(props) {
     setIsOnMobile(window.innerWidth < 1200)
   }
 
-  const ArrowLeft = (props) => {
-    if (props.currentSlide == 0) return false
+  const ArrowLeft = (properties) => {
+    if (properties.currentSlide == 0) return false
     else
       return (
-        <button {...props} className={'prev'}>
+        <button {...properties} className={'prev'}>
           <p>{'<'}</p>
         </button>
       )
   }
 
-  const ArrowRight = (props) => {
-    if (props.slideCount - props.currentSlide == 4) {
+  const ArrowRight = (properties) => {
+    if (properties.slideCount - properties.currentSlide == 4) {
       return false
     } else
       return (
-        <button {...props} className={'next'}>
+        <button {...properties} className={'next'}>
           <p>{'>'}</p>
         </button>
       )
