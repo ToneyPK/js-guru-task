@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { loginEndpoint } from '../../../api/endpoints'
 
@@ -35,18 +35,18 @@ export default function Login(props) {
   }
 
   return (
-    <div className="block-backdrop">
-      <div className="login d-flex">
-        <input type="text" placeholder="Email" onChange={handleEmailChange} />
+    <div className='block-backdrop'>
+      <form className='login d-flex'>
+        <input type='text' placeholder='Email' onChange={handleEmailChange} />
         <input
-          type="password"
-          placeholder="Password"
+          type='password'
+          placeholder='Password'
           onChange={handlePasswordChange}
         />
-        <button className="red" onClick={login}>
+        <button type='submit' className='red hvr-grow' onClick={login}>
           Login
         </button>
-      </div>
+      </form>
     </div>
   )
 }
