@@ -1,5 +1,3 @@
-import express from 'express'
-
 //middleware function that verifies the token from the request
 const verifyToken = (req, res, next) => {
   const bearerHeader = req.headers['authorization']

@@ -1,7 +1,8 @@
-import usersJson from '../db/user.js'
 import jsontWebToken from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
+
 import { SECRET_KEY } from '../config/config.js'
+import usersJson from '../db/user.js'
 
 // controller function that authenticates the user and serves a JWT token if the user is found in the 'database'
 export const authenticate = (req, res) => {

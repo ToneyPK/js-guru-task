@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import FeaturedItem from './featured-item/FeaturedItem'
 import Slider from 'react-slick'
 import axios from 'axios'
 
+import FeaturedItem from './featured-item/FeaturedItem'
 import { articlesEndpoint } from '../../api/endpoints'
 
 export default function Featured(props) {
@@ -75,7 +75,7 @@ export default function Featured(props) {
   }
 
   return (
-    <div className="featured container">
+    <div className='featured container'>
       <h2>Featured items</h2>
       <Slider {...settings}>
         {featuredItems.map((item) => {

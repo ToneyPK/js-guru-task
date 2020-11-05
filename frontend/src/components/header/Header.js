@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Navbar from './navbar/Navbar'
 import Searchbar from './searchbar/Searchbar'
 import Hero from './hero/Hero'
@@ -19,7 +20,7 @@ export default function Header(props) {
           <Searchbar />
           <Hero />
         </header>
-        <div className="curved-background"></div>
+        <div className='curved-background'></div>
       </div>
     </div>
   )

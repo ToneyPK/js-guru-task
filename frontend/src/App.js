@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import './styles/App.scss'
 import Header from './components/header/Header'
 import About from './components/about/About'

@@ -1,5 +1,6 @@
 import express from 'express'
 import validate from 'express-validation'
+
 import { authenticate } from '../controllers/authController.js'
 import authSchema from './validation/authRouteValidation.js'
 

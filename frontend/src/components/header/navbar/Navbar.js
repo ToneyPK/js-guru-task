@@ -42,30 +42,30 @@ export default function Navbar(props) {
   }
 
   return (
-    <div className="navbar p-20 d-flex ai-center">
-      <a href="#" className="logo">
-        <img src={logoImage} alt="logo"></img>
+    <div className='navbar p-20 d-flex ai-center'>
+      <a href='#' className='logo'>
+        <img src={logoImage} alt='logo'></img>
       </a>
 
-      <div className="search-tabs ai-center">
-        <a className="active" href="#">
+      <div className='search-tabs ai-center'>
+        <a className='active' href='#'>
           Search items
         </a>
-        <a href="#">Post items</a>
+        <a href='#'>Post items</a>
       </div>
 
       <div className={showStatus}>
-        <a href="#">
-          <FontAwesomeIcon className="hvr-grow" icon={faEnvelope} />
+        <a href='#'>
+          <FontAwesomeIcon className='hvr-grow' icon={faEnvelope} />
         </a>
-        <a href="#">
-          <div className="notifications">2</div>
-          <FontAwesomeIcon className="hvr-grow" icon={faBell} />
+        <a href='#'>
+          <div className='notifications'>2</div>
+          <FontAwesomeIcon className='hvr-grow' icon={faBell} />
         </a>
 
-        <div onClick={toggleDropdown} className="user d-flex ai-center">
+        <div onClick={toggleDropdown} className='user d-flex ai-center'>
           <img src={userImage} />
-          <a className="d-flex ai-center" href="#">
+          <a className='d-flex ai-center' href='#'>
             <p>{user.name}</p>
             <FontAwesomeIcon icon={faChevronDown} />
           </a>
@@ -76,17 +76,17 @@ export default function Navbar(props) {
           </h6>
           <p>{user.job}</p>
           <p>{user.age} years old</p>
-          <button onClick={logout} className="red hvr-grow">
+          <button onClick={logout} className='red hvr-grow'>
             Logout
           </button>
         </div>
       </div>
 
-      <div className="searchbar">
-        <form className="d-flex justify-center container">
-          <input type="text" placeholder="Search or post..."></input>
-          <button type="submit">
-            <FontAwesomeIcon className="hvr-grow" icon={faSearch} />
+      <div className='searchbar'>
+        <form className='d-flex justify-center container'>
+          <input type='text' placeholder='Search or post...'></input>
+          <button type='submit'>
+            <FontAwesomeIcon className='hvr-grow' icon={faSearch} />
           </button>
         </form>
       </div>
