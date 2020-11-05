@@ -9,7 +9,6 @@ export default function Login(props) {
   const login = async () => {
     const headers = {
       'Content-Type': 'application/json',
-      Authorization: 'JWT fefege...',
     }
 
     const loginResult = await axios.post(
@@ -21,8 +20,10 @@ export default function Login(props) {
       headers
     )
 
-    props.setIsLogged(true)
-    localStorage.setItem('token', loginResult.data.token)
+    if (loginResult.status == 200) {
+      props.setIsLogged(true)
+      localStorage.setItem('token', loginResult.data.token)
+    }
   }
 
   const handleEmailChange = (event) => {
@@ -34,18 +35,18 @@ export default function Login(props) {
   }
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Email"
-        onChange={handleEmailChange}
-      ></input>
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={handlePasswordChange}
-      ></input>
-      <button onClick={login}></button>
+    <div className="block-backdrop">
+      <div className="login d-flex">
+        <input type="text" placeholder="Email" onChange={handleEmailChange} />
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={handlePasswordChange}
+        />
+        <button className="red" onClick={login}>
+          Login
+        </button>
+      </div>
     </div>
   )
 }

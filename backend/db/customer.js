@@ -4,4 +4,5 @@ export default {
   name: 'Antonio',
   lastname: 'Pekeljevic',
   age: 25,
+  job: 'Software engineer'
 }

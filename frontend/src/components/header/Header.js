@@ -15,7 +15,7 @@ export default function Header(props) {
       <div>
         <header>
           {renderLogin()}
-          <Navbar />
+          <Navbar setIsLogged={props.setIsLogged} isLogged={props.isLogged} />
           <Searchbar />
           <Hero />
         </header>

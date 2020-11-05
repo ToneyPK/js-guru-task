@@ -7,25 +7,33 @@ import { articlesEndpoint } from '../../api/endpoints'
 
 export default function Featured(props) {
   const [featuredItems, setFeaturedItems] = useState([])
-
   const [isOnMobile, setIsOnMobile] = useState(false)
 
   useEffect(async () => {
-    const articleResults = await axios.get(articlesEndpoint, {
-      headers: {
-        'Content-Type': 'appliaction/json',
-        Authorization:
-          'Bearer ' +
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vyc0pzb24iOnsiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJwYXNzd29yZCI6Ik1USXpORFU9In0sImlhdCI6MTYwNDUyNTcxN30.WGLESGVnSgy8Po0YovDlK1yniL95leIhyBEUt71QmO8',
-      },
-    })
+    if (props.isLogged) {
+      const articleResults = await axios.get(articlesEndpoint, {
+        headers: {
+          'Content-Type': 'appliaction/json',
+          Authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      })
 
-    setFeaturedItems(articleResults.data)
+      setFeaturedItems(articleResults.data)
+    }
 
+    checkIfMobile()
+    listenForResize()
+  }, [props.isLogged])
+
+  const listenForResize = () => {
     window.addEventListener('resize', () => {
-      setIsOnMobile(isMobile())
+      setIsOnMobile(window.innerWidth < 1200)
     })
-  }, [])
+  }
+
+  const checkIfMobile = () => {
+    setIsOnMobile(window.innerWidth < 1200)
+  }
 
   const ArrowLeft = (props) => {
     if (props.currentSlide == 0) return false
@@ -48,22 +56,17 @@ export default function Featured(props) {
       )
   }
 
-  const isMobile = () => {
-    if (window.innerWidth < 1200) return true
-    else return false
-  }
-
   let slideNubmer = () => {
-    if (isMobile()) return 1
+    if (isOnMobile) return 1
     else return 4
   }
 
   const settings = {
     dots: false,
     infinite: false,
-    centerMode: isMobile(),
+    centerMode: isOnMobile,
     centerPadding: 20,
-    arrows: !isMobile(),
+    arrows: !isOnMobile,
     speed: 300,
     slidesToShow: slideNubmer(),
     slidesToScroll: 1,

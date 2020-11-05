@@ -18,6 +18,7 @@ app.use(bodyParser.json())
 // sets headers for better security
 app.use(helmet())
 
+//enables cors so requests can be made from other sources
 app.use(cors())
 
 // serves routes

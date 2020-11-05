@@ -1,15 +1,46 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faBell } from '@fortawesome/free-regular-svg-icons'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
 
 import logoImage from '../../../assets/media/logo-jsguru.png'
 import userImage from '../../../assets/media/user-image.jpg'
 
-export default function Navbar() {
+import { customerEndpoint } from '../../../api/endpoints'
+
+export default function Navbar(props) {
+  const [dropdownToggled, setDropdownToggled] = useState(false)
+  const [user, setUser] = useState({})
+
+  const dropdownClass = dropdownToggled ? 'dropdown d-flex' : 'd-none'
+  const showStatus = props.isLogged ? 'status flex-layout ai-center' : 'd-none'
+
+  useEffect(async () => {
+    if (props.isLogged) {
+      const userResults = await axios.get(customerEndpoint, {
+        headers: {
+          'Content-Type': 'appliaction/json',
+          Authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      })
+
+      setUser(userResults.data)
+    }
+  }, [props.isLogged])
+
+  const toggleDropdown = () => {
+    setDropdownToggled(!dropdownToggled)
+  }
+
+  const logout = () => {
+    localStorage.removeItem('token')
+    props.setIsLogged(false)
+  }
+
   return (
     <div className="navbar p-20 d-flex ai-center">
       <a href="#" className="logo">
@@ -23,7 +54,7 @@ export default function Navbar() {
         <a href="#">Post items</a>
       </div>
 
-      <div onClick={'xss'} className="status flex-layout ai-center">
+      <div className={showStatus}>
         <a href="#">
           <FontAwesomeIcon className="hvr-grow" icon={faEnvelope} />
         </a>
@@ -32,12 +63,22 @@ export default function Navbar() {
           <FontAwesomeIcon className="hvr-grow" icon={faBell} />
         </a>
 
-        <div className="user d-flex ai-center">
+        <div onClick={toggleDropdown} className="user d-flex ai-center">
           <img src={userImage} />
           <a className="d-flex ai-center" href="#">
-            <p>Username</p>
+            <p>{user.name}</p>
             <FontAwesomeIcon icon={faChevronDown} />
           </a>
+        </div>
+        <div className={dropdownClass}>
+          <h6>
+            {user.name} {user.lastname}
+          </h6>
+          <p>{user.job}</p>
+          <p>{user.age} years old</p>
+          <button onClick={logout} className="red hvr-grow">
+            Logout
+          </button>
         </div>
       </div>
 
